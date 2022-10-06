@@ -1,0 +1,129 @@
+{
+    "2_Color.png1671372": {
+        "filename": "2_Color.png",
+        "size": 1671372,
+        "regions": [
+            {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        394,
+                        455,
+                        511,
+                        603,
+                        717,
+                        725,
+                        718,
+                        514,
+                        458,
+                        396
+                    ],
+                    "all_points_y": [
+                        485,
+                        453,
+                        518,
+                        561,
+                        601,
+                        630,
+                        645,
+                        546,
+                        555,
+                        486
+                    ]
+                },
+                "region_attributes": {
+                    "Object Class": "Spatula"
+                }
+            },
+            {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        416,
+                        487,
+                        479,
+                        516,
+                        529,
+                        547,
+                        551,
+                        537,
+                        472,
+                        504,
+                        507,
+                        516,
+                        516,
+                        475,
+                        445,
+                        431,
+                        435,
+                        450,
+                        449,
+                        438,
+                        410,
+                        405,
+                        415
+                    ],
+                    "all_points_y": [
+                        24,
+                        27,
+                        0,
+                        0,
+                        30,
+                        45,
+                        84,
+                        92,
+                        93,
+                        123,
+                        188,
+                        210,
+                        242,
+                        252,
+                        246,
+                        239,
+                        200,
+                        183,
+                        148,
+                        102,
+                        69,
+                        45,
+                        25
+                    ]
+                },
+                "region_attributes": {
+                    "Object Class": "Robot"
+                }
+            },
+            {
+                "shape_attributes": {
+                    "name": "polygon",
+                    "all_points_x": [
+                        502,
+                        558,
+                        569,
+                        568,
+                        509,
+                        507
+                    ],
+                    "all_points_y": [
+                        118,
+                        117,
+                        128,
+                        145,
+                        145,
+                        134
+                    ]
+                },
+                "region_attributes": {
+                    "Object Class": "cheez-it-box"
+                }
+            }
+        ],
+        "file_attributes": {}
+    },
+    "1_Color.png1670949": {
+        "filename": "1_Color.png",
+        "size": 1670949,
+        "regions": [],
+        "file_attributes": {}
+    }
+}

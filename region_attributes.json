@@ -1,0 +1,15 @@
+{
+    "region": {
+        "Object Class": {
+            "type": "radio",
+            "description": "",
+            "options": {
+                "Spatula": "",
+                "Screw Driver": "",
+                "Table": ""                
+            },
+            "default_options": {}
+        }
+    },
+    "file": {}
+}
