@@ -128,7 +128,7 @@ class GenericMask:
     def polygons_to_mask(self, polygons):
         rle = mask_util.frPyObjects(polygons, self.height, self.width)
         rle = mask_util.merge(rle)
-        return mask_util.decode(rle)[:, :]
+        return mask_util.decode(rle)
 
     def area(self):
         return self.mask.sum()
@@ -330,7 +330,7 @@ class Visualizer:
             assigned_colors=colors,
             alpha=alpha,
         )
-        return self.output
+        return self.output, masks
 
     def overlay_instances(
         self,
