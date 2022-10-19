@@ -15,7 +15,7 @@ from customVisualizer import GenericMask, Visualizer
 def main(args):
     img_folder = args.root
     file_open = args.path
-    json_dict = json.load(file_open) 
+    json_dict = json.load(open(file_open)) 
 
 
     for key in json_dict.keys(): 
@@ -23,7 +23,6 @@ def main(args):
 
 
         orig_file_name = anno["filename"]
-        mask_file_name =  "segm_mask_" + orig_file_name  
         vis_file_name = "vis_" +   orig_file_name 
 
         all_bbox = []
@@ -65,11 +64,11 @@ def main(args):
             # Initialize visualization dictionary        
             vis_dict = {"pred_boxes": all_bbox, "pred_classes": all_classes, "pred_masks": all_masks}
             overlay_vis, binary_mask_obj = visualizer.draw_instance_predictions(vis_dict, score_show=False) 
-            binary_mask = [ x.mask*255 for x in binary_mask_obj]
+            
             
             for x, y, name in  zip(all_segm_x, all_segm_y, all_classes):
                 bin_mask_name = "bin_mask_" + name + "_" + orig_file_name 
-                
+                bin_mask_name = os.path.join(args.save, bin_mask_name)
             
                 #cv2.imwrite(bin_mask_name, mask)
                 ny, nx = img_rgb.shape[0:2]
@@ -87,6 +86,7 @@ def main(args):
 
 
             overlay_vis = overlay_vis.get_image()[:, :, ::-1]
+            vis_file_name = os.path.join(args.vis, vis_file_name)            
             cv2.imwrite(vis_file_name, overlay_vis)
 
 
@@ -96,4 +96,10 @@ if __name__ == "__main__":
                         default='/home/khiemphi', help="where the root folder for all images are")
     parser.add_argument("-p", "--path", type=str,
                         default='via_export_json.json', help="path to where .json annotation file is")
+    parser.add_argument("-s", "--save", type=str,
+                        default='bin_mask', help="path to where binary mask is stored")
+    parser.add_argument("-v", "--vis", type=str,
+                        default='vis_mask', help="path to where overlaid binary mask is stored")
+    args = parser.parse_args()
+    main(args)
 
